@@ -142,86 +142,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-2018_hhu_专题训练" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/24/2018_hhu_专题训练/">2018hhu 专题训练 基础算法</a>
-    </h1>
-  
-
-        
-        <a href="/2018/07/24/2018_hhu_专题训练/" class="archive-article-date">
-  	<time datetime="2018-07-24T15:30:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-24</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>​        在家摸了将近一个礼拜的鱼（其实整个春夏学期都没有好好训练补题，真 摸得一手好鱼），深感愧疚，回忆起想起去年冬天唯一一场参加的区域赛简直要哭出来，难度啊对手啊都不是跟上半年的比赛完全不是在同一等级。有预感今年依旧发配北京（毕竟有女队关照），决定还是滚回校训练，否则，再有一次近乎于爆零的体验怕是真的能当场哭出来，虽然不打铁是不可能的，但是，要优雅地拿铁！最近会把上半年做的题和最近的训练汇总一下，加油啦袁干干！</p>
-<h2 id="A-Quoit-Design（HDU-1007）"><a href="#A-Quoit-Design（HDU-1007）" class="headerlink" title="A - Quoit Design（HDU 1007）"></a>A - Quoit Design（HDU 1007）</h2><pre><code>因为在家所以一直都没开电脑（在家休息怎么能训练呢！），这场比赛最后一天文文拉我做的（心不甘情不愿地开电脑），但还是为自己的懈怠羞愧一秒....当时因为做的人少我也就没开这题，今天补题一看，噫，这道题我写过的，不就是个平面最近点对吗...这个故事告诉我们，打比赛至少要把每道题都看一遍！
-分治的思想，最近的点肯定是位置相近的点（废话），那么先按照x和y排序，我们可以把这么多点分为左部分和右部分，最近的两点肯定出现在左部分内部或右部分内部或者一点属于左部分，一点属于右部分。左右部分内部的点的距离可以通过递归来求得，递归的终点是左右端点相邻。而一点属于左部分，另一点属于右部分的情况，则是根据刚才求得的两个内部的最短距离d确定的。我们筛选出离中间点距离不超过d的点（因为只有横向距离不超过d才有可能成为最近点），这里是个优化，本来应该两两筛选，但是这样效率低下，用中间点来筛，虽然造成了候选点更多，但保证了候选点不漏，且在O(n)的时间就能筛完。将候选点按照y排序，使点两两比较并更新d,这是另一个优化，因为之前按照x排序，break几率不大，以y排序，当纵距离&gt;d时马上换下一个候选点，加快更新速度。
-下面是代码：
-</code></pre>
-        
-          <a class="article-more-a" href="/2018/07/24/2018_hhu_专题训练/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ACM</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/07/24/2018_hhu_专题训练/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-2018hhu 专题训练 基础算法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -702,10 +622,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">csp</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">ACM</a>
               </li>
             
             <div class="clearfix"></div>
